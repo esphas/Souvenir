@@ -74,9 +74,11 @@ namespace Souvenir {
             _baseAngle = 135;
             _overallMaximum = 0.001f;
             _circle = new Ellipse {
-                Fill = new ImageBrush(new BitmapImage(new Uri(@"test.jpg", UriKind.Relative))), // TEST
                 Stroke = new SolidColorBrush(Colors.White)
             };
+            if (System.IO.File.Exists(@"test.jpg")) {
+                _circle.Fill = new ImageBrush(new BitmapImage(new Uri(@"test.jpg", UriKind.Relative))); // TEST
+            }
             RefreshLayout();
         }
 
