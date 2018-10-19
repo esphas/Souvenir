@@ -38,6 +38,13 @@ namespace Souvenir {
                     var max = 0.9f;
                     val = Math.Min(Math.Max(val, min), max);
                     _ringSpectrum.SizeRate = val;
+                } else if ((Keyboard.Modifiers & ModifierKeys.Shift) == ModifierKeys.Shift) {
+                    // change opacity
+                    var val = _ringSpectrum.Opacity + (float)(e.Delta * 0.001);
+                    var min = 0.1f;
+                    var max = 1f;
+                    val = Math.Min(Math.Max(val, min), max);
+                    _ringSpectrum.Opacity = val;
                 } else {
                     // change Size
                     var val = _ringSpectrum.Size + (float)(e.Delta * 0.1);
