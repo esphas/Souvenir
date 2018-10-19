@@ -60,5 +60,9 @@ namespace Souvenir {
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e) {
             analyzer.Stop();
         }
+
+        private void MenuItem_Click_Exit(object sender, RoutedEventArgs e) {
+            Application.Current.Shutdown();
+        }
     }
 }

@@ -13,5 +13,10 @@
     <Grid>
         <local:RingSpectrum x:Name="_ringSpectrum">
         </local:RingSpectrum>
+        <Grid.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Exit" Click="MenuItem_Click_Exit"/>
+            </ContextMenu>
+        </Grid.ContextMenu>
     </Grid>
 </Window>
