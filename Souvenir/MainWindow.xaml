@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Souvenir"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Souvenir"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False" Topmost="True"
+        WindowStyle="None" AllowsTransparency="True" Background="{x:Null}"
+        Loaded="Window_Loaded" Closing="Window_Closing">
     <Grid>
-        
+        <local:RingSpectrum x:Name="_ringSpectrum">
+        </local:RingSpectrum>
     </Grid>
 </Window>
