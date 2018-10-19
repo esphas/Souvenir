@@ -124,7 +124,7 @@ namespace Souvenir {
                 _overallMaximum = max;
             }
             Dispatcher.Invoke(() => {
-                var bSize = _size * (1 - _sizeRate);
+                var bSize = _size * (1 - _sizeRate) / 2;
                 for (int i = 0; i < _binCount; ++i) {
                     _bins[i].Height = bSize * _binData[i] / _overallMaximum;
                 }
